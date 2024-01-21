@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <h5>Products List</h5>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Date Création</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let p of product">
+          <td>{{p.id}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.price}} MAD</td>
+          <td>{{p.dateCreation | date : "dd/MM/YYYY"}}</td>
+          <td>
+            <a class="btn btn-primary" href="ShowProdct/{{p.id}}">consulter</a>
+            <a class="btn btn-danger">modifier</a>
+            <button class="btn btn-info" (click)="deleteProduct(p)">supprimer</button>
+          </td>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

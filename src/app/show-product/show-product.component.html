@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card shadow mb-4">
+      <div class="card-body">
+        <h5>Products List</h5>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Date Création</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngIf="p">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.price}} MAD</td>
+            <td>{{p.dateCreation | date : "dd/MM/YYYY"}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
